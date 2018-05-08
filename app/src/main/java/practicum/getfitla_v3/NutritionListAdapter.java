@@ -7,8 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.squareup.picasso.Picasso;
+
 import java.util.List;
+
 /**
  * This is the class that binds the raw data to a specific item held within the recyclerview.
  * Following link(s) were used to implement the Adapter
@@ -21,9 +24,9 @@ public class NutritionListAdapter extends RecyclerView.Adapter<NutritionListAdap
     private List<NutritionItemFormat> fullList;
     private ItemClickListener clickListener;
 
-    public NutritionListAdapter(Context mtcx, List<NutritionItemFormat> exerciseList) {
+    public NutritionListAdapter(Context mtcx, List<NutritionItemFormat> nutritionList) {
         this.mtcx = mtcx;
-        this.fullList = exerciseList;
+        this.fullList = nutritionList;
     }
 
     @Override
@@ -64,10 +67,10 @@ public class NutritionListAdapter extends RecyclerView.Adapter<NutritionListAdap
         public itemViewHolder(View itemView) {
             super(itemView);
             //Code meant for information of each entry
+            // setting up viewholder
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
             textViewShortDesc = itemView.findViewById(R.id.textViewShortDesc);
             imageview = itemView.findViewById(R.id.imageView);
-
             //Code that is specifically for the OnClickListener
             itemView.setTag(itemView);
             //sets each instance of OnClickListener to the item

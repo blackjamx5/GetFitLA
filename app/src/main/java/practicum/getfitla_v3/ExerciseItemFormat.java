@@ -1,17 +1,14 @@
 package practicum.getfitla_v3;
 
-import android.media.Image;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.graphics.Bitmap;
 
 //Formats Information to be easily called
 public class ExerciseItemFormat implements Parcelable {
-
     private int id;
     private String name;
     private String shortdesc;
-    private String isboolean; //change this name
+    private String isboolean; // TODO change this name
     private String equipment;
     private String instructions;
     private String image;
@@ -25,32 +22,37 @@ public class ExerciseItemFormat implements Parcelable {
         this.equipment = equipment;
         this.instructions = instructions;
         this.image = image;
-
     }
 
     public int getId() {
         return id;
     }
+
     public String getName() {
         return name;
     }
+
     public String getShortdesc() {
         return shortdesc;
     }
+
     public String getIsboolean() {
         return isboolean;
     }
+
     public String getEquipment() {
         return equipment;
     }
+
     public String getInstructions() {
         return instructions;
     }
+
     public String getImage() {
         return image;
     }
 
-    //begin parcel shit
+    //begin parcel stuff
     @Override
     public int describeContents() {
         return 0;
